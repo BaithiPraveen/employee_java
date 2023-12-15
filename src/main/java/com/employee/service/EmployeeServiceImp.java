@@ -30,11 +30,10 @@ public class EmployeeServiceImp implements EmployeeService
 		return update_data;
 	}
 
-	public String deleteEmployee(int id) {
-		
-//		employeerepository.delete(employee);
+	public String deleteEmployee(int id) 
+	{
 		employeerepository.deleteById(id);
-		return "emplyee deleted ";
+		return String.format(" %d id emplyee deleted succefully..",id);
 	}
 
 	
@@ -43,9 +42,15 @@ public class EmployeeServiceImp implements EmployeeService
 		return employeerepository.findById(id).get();
 	}
 
-	public List<Employee> getEmployeeList(Employee employee) {
+	public List<Employee> getEmployeeList(Employee employee) 
+	{
 			
 		return employeerepository.findAll();
+	}
+	
+	public Employee updateEmployee_wot_id(Employee employee)
+	{
+		return employeerepository.save(employee);
 	}
 
 	
