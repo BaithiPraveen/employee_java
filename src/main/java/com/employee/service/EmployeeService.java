@@ -16,5 +16,7 @@ public interface EmployeeService
 	
 	public List<Employee> getEmployeeList(Employee employee);
 	
+	public Employee updateEmployee_wot_id(Employee employee);
+	
 	
 }
